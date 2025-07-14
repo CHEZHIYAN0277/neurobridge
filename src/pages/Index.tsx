@@ -12,7 +12,7 @@ import DarkModeToggle from '../components/DarkModeToggle';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-accent/20 via-background to-primary/10 dark:from-gray-900 dark:via-gray-800 dark:to-primary/5 transition-colors duration-300">
       <DarkModeToggle />
       <HeroSection />
       <AboutSection />
