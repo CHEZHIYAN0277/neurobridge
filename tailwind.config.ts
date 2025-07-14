@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// NeuroBridge custom colors
+				'neuro-blue': {
+					50: '#f0f8ff',
+					100: '#e0f0fe',
+					200: '#bae1fd',
+					300: '#7cc8fb',
+					400: '#36aaf7',
+					500: '#0c8ce8',
+					600: '#006ec6',
+					700: '#0158a1',
+					800: '#064b85',
+					900: '#0b3f6e',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +101,53 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(10px)"
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)"
+					}
+				},
+				'scale-in': {
+					"0%": {
+						transform: "scale(0.95)",
+						opacity: "0"
+					},
+					"100%": {
+						transform: "scale(1)",
+						opacity: "1"
+					}
+				},
+				'slide-up': {
+					"0%": {
+						transform: "translateY(100%)",
+						opacity: "0"
+					},
+					"100%": {
+						transform: "translateY(0)",
+						opacity: "1"
+					}
+				},
+				'float': {
+					"0%, 100%": {
+						transform: "translateY(0px)"
+					},
+					"50%": {
+						transform: "translateY(-10px)"
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'scale-in': 'scale-in 0.4s ease-out forwards',
+				'slide-up': 'slide-up 0.6s ease-out forwards',
+				'float': 'float 3s ease-in-out infinite',
 			}
 		}
 	},
