@@ -7,40 +7,40 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20"></div>
+      <div className="absolute inset-0 medical-gradient"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 bg-blue-200/30 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-      <div className="absolute top-40 right-20 w-8 h-8 bg-blue-300/30 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-32 left-20 w-12 h-12 bg-blue-100/40 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 left-10 w-16 h-16 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+      <div className="absolute top-40 right-20 w-8 h-8 bg-primary/30 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-32 left-20 w-12 h-12 bg-primary/10 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="text-center lg:text-left space-y-8 animate-fade-in">
           <div className="space-y-4">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
               <span className="block">NeuroBridge</span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl gradient-text">
                 Home+
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-2xl">
-              Empowering Disabled Lives with AI, IoT, and Voice
+            <p className="text-xl sm:text-2xl text-muted-foreground font-light max-w-2xl">
+              Making Life Easier for Patients with Disabilities
             </p>
             
-            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl">
-              Revolutionary assistive technology that transforms smart homes through gestures, brain signals, and multilingual AI assistance.
+            <p className="text-lg text-muted-foreground max-w-xl">
+              Simple, reliable technology that helps you control your home and stay connected with just a smile, thought, or voice command.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Explore Features
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
-            <Button variant="outline" size="lg" className="border-2 border-blue-300 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-900/20 px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
+            <Button variant="outline" size="lg" className="border-2 border-primary/30 text-primary hover:bg-primary/10 px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
               <Play className="mr-2 h-5 w-5" />
               Watch Demo
             </Button>
